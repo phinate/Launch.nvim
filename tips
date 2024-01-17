@@ -1,0 +1,7 @@
+"I usually open Vim with vim . which pops me right into the netrw view. From here, I can create new files or directories:
+
+% – Create new file from netrw
+d – Create new directory from netrw
+If you’re in a buffer and want to hop back to the file tree, just use :e . and you’ll be placed in a view of the current working directory. From here, you can browse and create a new file or folder exactly where you want it."
+
+There are comments added by me throughout this whole config. Look at those for some more details on the specifics of the lua setup.
