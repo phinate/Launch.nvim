@@ -1,3 +1,5 @@
+-- .. is string concatenation in lua!
+-- prepends the lazy path to the runtime path (i do not know why)
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -11,10 +13,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- all specs passed to lazy via one global default
 require("lazy").setup {
   spec = LAZY_PLUGIN_SPEC,
   install = {
-    colorscheme = { "darkplus", "default" },
+    colorscheme = { "cyberdream", "default" },
   },
   ui = {
     border = "rounded",

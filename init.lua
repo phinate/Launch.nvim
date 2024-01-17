@@ -2,6 +2,7 @@ require "user.launch"
 require "user.options"
 require "user.keymaps"
 require "user.autocmds"
+-- spec is defined in user.launch to add a lazy spec to the lazy config
 spec "user.colorscheme"
 spec "user.devicons"
 spec "user.treesitter"

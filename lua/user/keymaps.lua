@@ -5,9 +5,10 @@ keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- "essential"? to leave Ctrl-i alone? authour forgets 
 keymap("n", "<C-i>", "<C-i>", opts)
 
--- Better window navigation
+-- Better window navigation (alt + directions?)
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
 keymap("n", "<m-k>", "<C-w>k", opts)
@@ -25,6 +26,7 @@ keymap("n", "g#", "g#zz", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Hold on to the thing you copied if you paste over a word (otherwise the new word gets registered!)
 keymap("x", "p", [["_dP]])
 
 vim.cmd [[:amenu 10.100 mousemenu.Goto\ Definition <cmd>lua vim.lsp.buf.definition()<CR>]]
@@ -34,7 +36,7 @@ vim.cmd [[:amenu 10.110 mousemenu.References <cmd>lua vim.lsp.buf.references()<C
 vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 
--- more good
+-- beginning/end of indented line remaped to shift h/l
 keymap({ "n", "o", "x" }, "<s-h>", "^", opts)
 keymap({ "n", "o", "x" }, "<s-l>", "g_", opts)
 
